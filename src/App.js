@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom"
 
 //Pages
 import Home from "./Pages/Home"
@@ -9,14 +9,14 @@ const App = () => {
     <BrowserRouter>
     <header>
       <nav>
-        <h1>Welcome to Jobby</h1>
-        <Link to="/">Home</Link>
-        <Link to="about">About</Link>
+        <h1>Jobby</h1>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="about">About</NavLink>
       </nav>
     </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index  element={<Home />} />
           <Route path="about" element={<About />} />
         </Routes>
       </main>
