@@ -1,5 +1,5 @@
-const Home =()=>{
-    return(
+const Home = () => {
+    return (
         <div className="home">
             <h2>Welcome</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem ducimus odit fugit similique amet porro perferendis natus, repellendus provident quis unde ullam fuga hic eum labore autem alias? Qui, dicta.</p>
