@@ -8,12 +8,12 @@ import {
 //Pages
 import Home from "./Pages/Home"
 import About from "./Pages/About"
+import Faq from "./Pages/Help/Faq"
+import Contact from "./Pages/Help/Contact"
 
 //Layout
 import RootLayout from "./Layout/RootLayout"
 import HelpLayout from "./Layout/HelpLayout"
-import Faq from "./Pages/Help/Faq"
-import Contact from "./Pages/Help/Contact"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
