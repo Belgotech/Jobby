@@ -37,7 +37,6 @@ const Faq = () => {
         <div className="faq">
             <h3>Frequently Asked Questions</h3>
 
-            
                 {data.map(({id, title, description})=>{
                     return(
                         <div key={id} className="question" >
@@ -47,7 +46,7 @@ const Faq = () => {
                         
                     )
                 })}
-           
+
         </div>
     )
 }
