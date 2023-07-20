@@ -11,7 +11,7 @@ import About from "./Pages/About"
 import Faq from "./Pages/Help/Faq"
 import Contact from "./Pages/Help/Contact"
 import PageNotFound from "./Pages/Help/PageNotFound"
-import Careers from "./Pages/careers/Careers"
+import Careers, { careersLoader } from "./Pages/careers/Careers"
 
 //Layout
 import RootLayout from "./Layout/RootLayout"
@@ -30,7 +30,9 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path="careers" element={<CareersLayout />}>
-        <Route index element={<Careers />} />
+        <Route index element={<Careers />} 
+        loader={careersLoader}
+        />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />
