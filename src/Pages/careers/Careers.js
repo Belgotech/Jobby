@@ -6,7 +6,7 @@ export default function Careers() {
   return (
     <div className="careers">
       {careers.map(careers => (
-        <Link to="/" key={careers.id}>
+        <Link to={careers.id.toString()} key={careers.id}>
           <p>{careers.title}</p>
           <p>Based in {careers.location}</p>
         </Link>
@@ -18,11 +18,12 @@ export default function Careers() {
 // data loader
 export const careersLoader = async () => {
 
-  try {
     const res = await fetch("https://localhost:4000/careers")
 
+    if (!res.ok) {
+      throw Error('Could not find that career.')
+    }
+    
     return res.json()
-  } catch (errors) {
-    console.log(errors)
-  }
+ 
 }
