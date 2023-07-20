@@ -36,7 +36,7 @@ const router = createBrowserRouter(
         />
       <Route 
         path=":id"
-        element={CareersDetails}
+        element={<CareersDetails />}
       />
       </Route>
 
