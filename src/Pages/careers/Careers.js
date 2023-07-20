@@ -4,8 +4,8 @@ export default function Careers() {
   const careers = useLoaderData()
 
   return (
-<div className="careers">
-      {careers.map(careers=> (
+    <div className="careers">
+      {careers.map(careers => (
         <Link to="/" key={careers.id}>
           <p>{careers.title}</p>
           <p>Based in {careers.location}</p>
@@ -18,11 +18,11 @@ export default function Careers() {
 // data loader
 export const careersLoader = async () => {
 
-  try{
-const res = await fetch("https://localhost:4000/careers")
+  try {
+    const res = await fetch("https://localhost:4000/careers")
 
-return res.json()
-}catch(errors){
-  console.log(errors)
-}
+    return res.json()
+  } catch (errors) {
+    console.log(errors)
+  }
 }
