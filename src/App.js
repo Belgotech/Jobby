@@ -13,6 +13,7 @@ import Contact from "./Pages/Help/Contact"
 import PageNotFound from "./Pages/Help/PageNotFound"
 import Careers, { careersLoader } from "./Pages/careers/Careers"
 import CareersDetails, { CareerDetailsLoader } from "./Pages/careers/CareerDetails"
+import CareersError from "./Pages/careers/CareersError"
 
 //Layout
 import RootLayout from "./Layout/RootLayout"
@@ -38,6 +39,7 @@ const router = createBrowserRouter(
         path=":id"
         element={<CareersDetails />}
         loader={CareerDetailsLoader}
+        errorElement={CareersError}
       />
       </Route>
 
