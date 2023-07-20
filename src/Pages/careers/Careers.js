@@ -5,7 +5,12 @@ export default function Careers() {
 
   return (
 <div className="careers">
-      
+      {careers.map(careers=> (
+        <Link to="/" key={careers.id}>
+          <p>{careers.title}</p>
+          <p>Based in {careers.location}</p>
+        </Link>
+      ))}
     </div>
   )
 }
