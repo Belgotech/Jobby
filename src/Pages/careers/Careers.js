@@ -1,7 +1,13 @@
-import { useLoaderData, Link } from "react-router-dom"
+import { useLoaderData, Link, Navigate } from "react-router-dom"
+import { useState } from "react"
 
 export default function Careers() {
   const careers = useLoaderData()
+  const [user, setUser] = useState("Beloved")
+
+  if(!user){
+    return <Navigate to="/" replace={true} />
+  }
 
   return (
     <div className="careers">
@@ -11,6 +17,7 @@ export default function Careers() {
           <p>Based in {careers.location}</p>
         </Link>
       ))}
+      <button onClick={() => setUser(null)}>Logout</button>
     </div>
   )
 }
