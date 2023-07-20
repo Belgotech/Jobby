@@ -9,7 +9,7 @@ import {
 import Home from "./Pages/Home"
 import About from "./Pages/About"
 import Faq from "./Pages/Help/Faq"
-import Contact from "./Pages/Help/Contact"
+import Contact, { contactAction } from "./Pages/Help/Contact"
 import PageNotFound from "./Pages/Help/PageNotFound"
 import Careers, { careersLoader } from "./Pages/careers/Careers"
 import CareersDetails, { CareerDetailsLoader } from "./Pages/careers/CareerDetails"
@@ -29,7 +29,7 @@ const router = createBrowserRouter(
 
       <Route path="help" element={<HelpLayout />} >
         <Route path="faq" element={<Faq />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="contact" element={<Contact />} action={contactAction} />
       </Route>
 
       <Route path="careers" element={<CareersLayout />} errorElement={<CareersError />} >
