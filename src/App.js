@@ -23,6 +23,7 @@ import CareersLayout from "./Layout/CareersLayout"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />} >
+      
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
 
@@ -31,7 +32,7 @@ const router = createBrowserRouter(
         <Route path="contact" element={<Contact />} />
       </Route>
 
-      <Route path="careers" element={<CareersLayout />}>
+      <Route path="careers" element={<CareersLayout />} errorElement={<CareersError />} >
         <Route index element={<Careers />} 
         loader={careersLoader}
         />
@@ -39,7 +40,6 @@ const router = createBrowserRouter(
         path=":id"
         element={<CareersDetails />}
         loader={CareerDetailsLoader}
-        errorElement={CareersError}
       />
       </Route>
 
