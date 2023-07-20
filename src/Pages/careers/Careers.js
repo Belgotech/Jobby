@@ -14,7 +14,7 @@ export default function Careers() {
     </div>
   )
 }
-
+ 
 // data loader
 export const careersLoader = async () => {
 
@@ -23,7 +23,7 @@ export const careersLoader = async () => {
     if (!res.ok) {
       throw Error('Could not find that career.')
     }
-    
+
     return res.json()
  
 }
